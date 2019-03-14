@@ -15,16 +15,16 @@ public class Student {
 		return id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public int setId(int id) {
+		return this.id = id;
 	}
 
 	public String getName() {
 		return Name;
 	}
 
-	public void setName(String name) {
-		Name = name;
+	public String setName(String name) {
+		return Name = name;
 	}
 
 	@Override

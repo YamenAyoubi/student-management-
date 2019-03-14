@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import Project.StudentManagement.models.Student;
@@ -12,8 +13,9 @@ import Project.StudentManagement.models.Student;
 public class StudentDaoListImpl implements StudentDao{
 
 	private List<Student> studentList = new ArrayList<Student>();
-	Scanner in = new Scanner (System.in);
 	
+	
+	@Override
 	public Student find(int id) {
 		
 		for (Student std : studentList) {
@@ -23,9 +25,9 @@ public class StudentDaoListImpl implements StudentDao{
 		}
 		return null;
 	}
-
+	@Override
 	public Student save(Student student) {
-			
+		
 		if (student == null) {
 			throw new IllegalArgumentException();
 
@@ -36,14 +38,14 @@ public class StudentDaoListImpl implements StudentDao{
 		}
 	}
 
-	
+	@Override
 	public void delete(int id) {
 		for (Student std : studentList) {
 			studentList.remove(std);
 			System.out.println("Student Has been Removed");
 		}
 	}
-
+	@Override
 	public List<Student> findAll() {
 		
 		return studentList;

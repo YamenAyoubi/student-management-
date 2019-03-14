@@ -1,34 +1,39 @@
 package Project.StudentManagement.util;
-import java.util.ArrayList;
-import java.util.List;
+
+
 import java.util.Scanner;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.stereotype.Service;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
 import Project.StudentManagement.data_access.StudentDao;
 import Project.StudentManagement.models.Student;
 
-@ComponentScan
-@Service
+@Component
 public class ScannerInputService implements UserInputService{
 
-	private StudentDao dao ;
-	
-	private List<Student> newList = new ArrayList<>();
-	Scanner in = new Scanner (System.in);
+	private Scanner in;
 	
 	@Autowired
-	public Student addStudent(int id, String Name) {
-		
-		for (Student std:newList) {
-			
-			std.setId(in.nextInt());
-			std.setName(in.nextLine());
-			return std;
-		}
-		return dao.save(new Student(id,Name));
+	public ScannerInputService(Scanner in) {
+		this.in=in;
 	}
 
+	@Override
+	public String getString() {
+		// TODO Auto-generated method stub
+		return in.nextLine();
+	}
+
+	@Override
+	public int getInt() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	
+	
 }
