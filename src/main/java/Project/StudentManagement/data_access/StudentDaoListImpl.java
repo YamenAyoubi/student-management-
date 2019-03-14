@@ -49,5 +49,4 @@ public class StudentDaoListImpl implements StudentDao{
 		return studentList;
 	}
 
-	
 }
