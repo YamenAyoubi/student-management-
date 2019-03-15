@@ -1,9 +1,7 @@
 package Project.StudentManagement.data_access;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import java.util.List;
+
 import org.springframework.stereotype.Component;
 
 import Project.StudentManagement.models.Student;
@@ -12,43 +10,32 @@ import Project.StudentManagement.models.Student;
 @Component
 public class StudentDaoListImpl implements StudentDao{
 
-	private List<Student> studentList = new ArrayList<Student>();
-	
-	
+
+
 	@Override
 	public Student find(int id) {
-		
-		for (Student std : studentList) {
-			if (std.getId() == id) {
-				return std;
-			}
-		}
+		// TODO Auto-generated method stub
 		return null;
 	}
+
 	@Override
 	public Student save(Student student) {
-		
-		if (student == null) {
-			throw new IllegalArgumentException();
-
-		} else {
-			studentList.add(student);
-			System.out.println(student);
-			return student;
-		}
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
 	public void delete(int id) {
-		for (Student std : studentList) {
-			studentList.remove(std);
-			System.out.println("Student Has been Removed");
-		}
+		// TODO Auto-generated method stub
+		
 	}
+
 	@Override
 	public List<Student> findAll() {
-		
-		return studentList;
+		// TODO Auto-generated method stub
+		return null;
 	}
+	
+	
 
 }

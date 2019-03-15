@@ -3,13 +3,14 @@ package Project.StudentManagement.Services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import Project.StudentManagement.data_access.StudentDao;
 import Project.StudentManagement.models.Student;
 import Project.StudentManagement.util.UserInputService;
 
-
+@Component
 public class StudentManagementConsoleImpl implements StudentManagement{
 	
 	UserInputService scannerService;
@@ -17,39 +18,33 @@ public class StudentManagementConsoleImpl implements StudentManagement{
 	
 	@Override
 	public Student create() {
-		
+		// TODO Auto-generated method stub
 		return null;
 	}
 	@Override
 	public Student save(Student student) {
-		
-		return studentDao.save(student);
+		// TODO Auto-generated method stub
+		return null;
 	}
 	@Override
 	public Student find(int id) {
-		
-		return studentDao.find(id);
+		// TODO Auto-generated method stub
+		return null;
 	}
 	@Override
 	public Student remove(int id) {
-		studentDao.find(id);
-		studentDao.delete(id);
-		
-		return (Student) studentDao.findAll();
-
+		// TODO Auto-generated method stub
+		return null;
 	}
 	@Override
 	public List<Student> findAll() {
-		
-		return studentDao.findAll();
+		// TODO Auto-generated method stub
+		return null;
 	}
 	@Override
 	public Student edit(Student student) {
-		
+		// TODO Auto-generated method stub
 		return null;
 	}
-	
-	
-	
 
 }
