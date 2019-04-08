@@ -6,7 +6,7 @@ import Project.StudentManagement.models.Student;
 
 public interface StudentDao {
 	
-	Student find(int id);
+	List<Student> find(int id);
 	Student save(Student student);
 	void delete(int id);
 	List<Student> findAll();
